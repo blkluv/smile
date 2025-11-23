@@ -1,189 +1,207 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-title: "Have Any Project on Your Mind?"
-description: "Great! We're excited to hear from you and let's start something"
-
-# image: "/images/about-us/about-one.jpg"
-# imagePosition: "left" # Choose between "left" or "right"
+enable: true
+title: "Ready to Transform Your Dental Practice with TikTok?"
+description: "Let's create viral content that brings new patients to your door. Schedule your free TikTok strategy session today!"
 
 map:
   enable: true
-  position: "right" # Choose between "left" or "right"
-  title: "Map of New Work City"
-  url: https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed # Embed map iframe URL generated from https://www.maps.ie/create-google-map/
+  position: "right"
+  title: "Find Us in Atlanta"
+  url: https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Atlanta,%20Georgia+(SmileSats)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed
 
-# contactInformation:
-#   - title: "Headquarters"
-#     icon: "/images/icons/svg/location-filled.svg"
-#     description: "27 Division St, New York, NY 10002, USA"
-#     button:
-#       # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
-#       enable: true
-#       label: "Get Direction"
-#       url: "/"
-#       # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-#       # variant: "" # Optional: fill | outline | text | circle
-#       # rel: "" # Optional
-#       # target: "" # Optional
-#
-#   - title: "Email Address"
-#     icon: "/images/icons/svg/message-filled.svg"
-#     description: |
-#       folex.agency@mail.com
-#       folex.agency@support.com
-#     button:
-#       # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
-#       enable: true
-#       label: "Send Message"
-#       url: "mailto:folex.agency@mail.com"
-#       # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-#       # variant: "" # Optional: fill | outline | text | circle
-#       # rel: "" # Optional
-#       # target: "" # Optional
-#
-#   - title: "Phone Number"
-#     icon: "/images/icons/svg/phone-filled.svg"
-#     description: |
-#       +1 800 123 654 987
-#       +1 800 223 984 002
-#     button:
-#       # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
-#       enable: true
-#       label: "Call Anytime"
-#       url: "tel:+1800123654987"
-#       # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-#       # variant: "" # Optional: fill | outline | text | circle
-#       # rel: "" # Optional
-#       # target: "" # Optional
+contactInformation:
+  - title: "Atlanta Headquarters"
+    icon: "/images/icons/svg/location-filled.svg"
+    description: "Atlanta, GA, USA"
+    button:
+      enable: true
+      label: "Get Direction"
+      url: "https://maps.google.com/maps?q=Atlanta,Georgia"
+      target: "_blank"
 
-# Check config.toml file for form action related settings
-# this is also used in the footer of the personal portfolio homepage
+  - title: "Email Address"
+    icon: "/images/icons/svg/message-filled.svg"
+    description: |
+      fun@smilesats.com
+      support@smilesats.com
+    button:
+      enable: true
+      label: "Send Message"
+      url: "mailto:fun@smilesats.com"
+
+  - title: "Phone Number"
+    icon: "/images/icons/svg/phone-filled.svg"
+    description: |
+      +1 404 889 5545
+    button:
+      enable: true
+      label: "Call Us"
+      url: "tel:+14048895545"
+
 form:
-  emailSubject: "New form submission from folex website" # Customized email subject (applicable when anyone submit form, form submission may receive by email depend on provider)
+  emailSubject: "New SmileSats Inquiry - TikTok Dental Marketing"
   submitButton:
-    # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
     enable: true
-    label: "SEND MESSAGE"
-    # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-    # variant: "" # Optional: fill | outline | text | circle
-    # rel: "" # Optional
-    # target: "" # Optional
+    label: "GET MY FREE STRATEGY SESSION"
+    hoverEffect: "creative-fill"
+    variant: "fill"
 
-  # This note will show at the end of form
-  # note: |
-  #   Your data is safe with us. We respect your privacy and never share your information. <br /> Read our [Privacy Policy](/privacy-policy/).
+  note: |
+    Your dental practice information is confidential. We'll contact you within 24 hours to discuss your TikTok marketing strategy. <br /> Read our [Privacy Policy](/privacy-policy/).
+  
   inputs:
     - label: ""
-      placeholder: "Full Name *"
-      name: "Full Name" # This is crucial. Its indicate under which name you want to receive this field data
+      placeholder: "Practice Name *"
+      name: "Practice Name"
       required: true
       halfWidth: true
       defaultValue: ""
+
+    - label: ""
+      placeholder: "Your Name *"
+      name: "Full Name"
+      required: true
+      halfWidth: true
+      defaultValue: ""
+
     - label: ""
       placeholder: "Email Address *"
-      name: "Email Address" # This is crucial. Its indicate under which name you want to receive this field data
+      name: "Email Address"
       required: true
       type: "email"
       halfWidth: true
       defaultValue: ""
+
     - label: ""
-      placeholder: "Subject *"
-      name: "Subject" # This is crucial. Its indicate under which name you want to receive this field data
+      placeholder: "Phone Number *"
+      name: "Phone Number"
+      required: true
+      type: "tel"
+      halfWidth: true
+      defaultValue: ""
+
+    - label: ""
+      placeholder: "Current Monthly Marketing Budget"
+      name: "Marketing Budget"
       required: false
       halfWidth: true
       dropdown:
-        type: "" # select | search - default is select
-        search: # if type is search then it will work
-          placeholder: ""
+        type: "select"
         items:
-          - label: "General Inquiry"
-            value: "General Inquiry"
+          - label: "Less than $1,000"
+            value: "Less than $1,000"
             selected: false
-          - label: "Partnership Opportunity"
-            value: "Partnership Opportunity"
+          - label: "$1,000 - $3,000"
+            value: "$1,000 - $3,000"
             selected: false
-          - label: "Investment Opportunity"
-            value: "Investment Opportunity"
+          - label: "$3,000 - $5,000"
+            value: "$3,000 - $5,000"
             selected: false
+          - label: "$5,000+"
+            value: "$5,000+"
+            selected: false
+
     - label: ""
-      placeholder: "Subject With Search *"
-      name: "Subject With Search" # This is crucial. Its indicate under which name you want to receive this field data
-      required: false
+      placeholder: "Service Interest *"
+      name: "Service Interest"
+      required: true
       halfWidth: true
       dropdown:
-        type: "search" # select | search - default is select
-        search: # if type is search then it will work
-          placeholder: "Subject With Search"
+        type: "search"
+        search:
+          placeholder: "Select service interest"
         items:
-          - label: "General Inquiry"
-            value: "General Inquiry"
+          - label: "Starter Plan - TikTok Launch"
+            value: "Starter Plan"
             selected: false
-          - label: "Partnership Opportunity"
-            value: "Partnership Opportunity"
+          - label: "Glo-Up Plan - TikTok Growth"
+            value: "Glo-Up Plan"
             selected: false
-          - label: "Career Opportunity"
-            value: "Career Opportunity"
+          - label: "Elite Plan - Complete Ecosystem"
+            value: "Elite Plan"
             selected: false
-          - label: "Investment Opportunity"
-            value: "Investment Opportunity"
+          - label: "Custom Enterprise Solution"
+            value: "Enterprise Solution"
             selected: false
-          - label: "Media Inquiry"
-            value: "Media Inquiry"
+          - label: "Just Exploring Options"
+            value: "Exploring Options"
             selected: false
+
     - label: ""
       tag: "textarea"
       defaultValue: ""
-      rows: "2" # Only work if tag is textarea
-      placeholder: "How can we help you *"
-      name: "Message" # This is crucial. Its indicate under which name you want to receive this field data
+      rows: "4"
+      placeholder: "Tell us about your practice and TikTok goals... *"
+      name: "Practice Details"
       required: true
       halfWidth: false
-    - label: "Google Search" # only valid for type="checkbox" & type === "radio"
-      checked: false # only valid for type="checkbox" & type === "radio"
-      name: "User Source" # This is crucial. Its indicate under which name you want to receive this field data
+
+    - label: "Google Search"
+      name: "Referral Source"
       required: true
-      groupLabel: "How did you hear about us?" # Radio Inputs Label
-      group: "source" # when you add group then it will omit space between the same group radio input
+      groupLabel: "How did you hear about us?"
+      group: "source"
       type: "radio"
       halfWidth: true
       defaultValue: ""
-    - label: "Social Media" # only valid for type="checkbox" & type === "radio"
-      name: "User Source" # This is crucial. Its indicate under which name you want to receive this field data
+
+    - label: "TikTok"
+      name: "Referral Source"
       required: true
-      groupLabel: "" # Radio Inputs Label
-      group: "source" # when you add group then it will omit space between the same group radio input
+      group: "source"
       type: "radio"
       halfWidth: true
       defaultValue: ""
-    # - label: "Referral" # only valid for type="checkbox" & type === "radio"
-    #   name: "User Source" # This is crucial. Its indicate under which name you want to receive this field data
-    #   required: true
-    #   groupLabel: "" # Radio Inputs Label
-    #   group: "source" # when you add group then it will omit space between the same group radio input
-    #   type: "radio"
-    #   halfWidth: true
-    #   defaultValue: ""
-    # - label: "Other" # only valid for type="checkbox" & type === "radio"
-    #   name: "User Source" # This is crucial. Its indicate under which name you want to receive this field data
-    #   required: true
-    #   groupLabel: "" # Radio Inputs Label
-    #   group: "source" # when you add group then it will omit space between the same group radio input
-    #   type: "radio"
-    #   halfWidth: true
-    #   defaultValue: ""
-    - label: "I agree to the terms and conditions and [privacy policy](/)." # only valid for type="checkbox" & type === "radio"
+
+    - label: "Referral"
+      name: "Referral Source"
+      required: true
+      group: "source"
+      type: "radio"
+      halfWidth: true
+      defaultValue: ""
+
+    - label: "Social Media"
+      name: "Referral Source"
+      required: true
+      group: "source"
+      type: "radio"
+      halfWidth: true
+      defaultValue: ""
+
+    - label: "Other"
+      name: "Referral Source"
+      required: true
+      group: "source"
+      type: "radio"
+      halfWidth: true
+      defaultValue: ""
+
+    - label: "I want to receive TikTok marketing tips and practice growth strategies"
+      id: "newsletter-optin"
+      name: "Newsletter Opt-in"
+      value: "Subscribed"
+      checked: true
+      required: false
+      type: "checkbox"
+      halfWidth: false
+      defaultValue: ""
+
+    - label: "I agree to the terms and conditions and [privacy policy](/privacy-policy/)"
       id: "privacy-policy"
-      name: "Agreed Privacy" # This is crucial. Its indicate under which name you want to receive this field data
-      value: "Agreed" # Value that will be submit (applicable for type="checkbox" & type === "radio")
-      checked: false # only valid for type="checkbox" & type === "radio"
+      name: "Agreed Privacy"
+      value: "Agreed"
+      checked: false
       required: true
       type: "checkbox"
       halfWidth: false
       defaultValue: ""
-    - note: success # info | warning | success | deprecated | hint
+
+    - note: success
       parentClass: "hidden text-sm message success"
-      content: We have received your message! We'll get back to you as soon as possible.
-    - note: deprecated # info | warning | success | deprecated | hint
+      content: "Thank you! We've received your inquiry and will contact you within 24 hours to schedule your free TikTok strategy session."
+
+    - note: deprecated
       parentClass: "hidden text-sm message error"
-      content: Something went wrong! please use this mail - [folex-astro-theme@gmail.com](mailto:folex-astro-theme@gmail.com) to submit a ticket!
+      content: "Something went wrong! Please email us directly at [fun@smilesats.com](mailto:fun@smilesats.com)"
 ---

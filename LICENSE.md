@@ -1,5 +1,5 @@
 Getastrothemes Free Theme License
-Copyright (c) 2025 Getastrothemes
+Copyright (c) 2025 SmileSats
 
 Permission is hereby granted to use this theme (the “Theme”) in personal or commercial projects, under the following conditions:
 

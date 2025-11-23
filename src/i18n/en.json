@@ -9,13 +9,15 @@
   },
   "headerOffcanvas": {
     "description": "We are a digital agency that helps businesses create immersive experiences.",
-    "buttonLabel": "Let’s Talk With Us"
+    "buttonLabel": "Let's Talk With Us",
+    "buttonUrl": "https://smilesats.com/contact/"
   },
   "navigation": {
-    "buttonLabel": "Get Started"
+    "buttonLabel": "Get Started",
+    "buttonUrl": "https://smilesats.com/membership-levels/"
   },
   "footer": {
-    "copyright": "Copyright © {{ year }} by your company / Crafted with [Getastrothemes](https://getastrothemes.com/)",
+    "copyright": "Copyright © {{ year }} SmileSats",
     "_comment": "We kindly appreciate it if you retain the theme copyright. Thank you for supporting Getastrothemes!"
   }
 }
