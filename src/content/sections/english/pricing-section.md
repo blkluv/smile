@@ -1,72 +1,66 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
+enable: true
 title: ""
 
 list:
   - enable: true
-    name: "Personal"
-    description: "We care about their success. For us real relationships feel real"
+    name: "STARTER"
+    description: "Perfect for practices launching their TikTok presence"
     price:
       prependValue: "$"
-      value: "180"
+      value: "1111"
       appendValue: "/mo"
     features:
-      - WEB & MOBILE
-      - FREE CUSTOM DOMAIN
-      - BEST HOSTING EVER
-      - OUTSTANDING SUPPORT
-      - WEB DESIGN
+      - Complete TikTok Channel Management
+      - 1 Branded ReelView + What3Words Location
+      - Monthly Analytics Dashboard
+      - SmileSats Social Profile Setup
     button:
-      # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
       enable: true
-      label: "CHOOSE THIS PLAN"
+      label: "GET STARTED"
       url: "/"
-      # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-      # variant: "" # Optional: fill | outline | text | circle
-      # rel: "" # Optional
-      # target: "" # Optional
+      hoverEffect: "text-flip" # Subtle and professional for the entry-level plan
+      variant: "outline" # A less prominent, outline button
+      target: "_blank" # Opens in a new tab to keep the site open
   - enable: true
-    name: "Startup"
-    description: "We care about their success. For us real relationships feel real"
+    name: "GLO-UP"
+    description: "Ideal for practices ready to dominate TikTok"
     price:
       prependValue: "$"
-      value: "180"
+      value: "3333"
       appendValue: "/mo"
     features:
-      - WEB & MOBILE
-      - FREE CUSTOM DOMAIN
-      - BEST HOSTING EVER
-      - OUTSTANDING SUPPORT
-      - WEB DESIGN
+      - Everything in Starter
+      - $1,000 CAND$ Rewards Pool
+      - 4 Custom TikTok Reels Monthly
+      - Priority Support
+      - Content Strategy Planning
     button:
-      # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
       enable: true
-      label: "CHOOSE THIS PLAN"
+      label: "GO PRO"
       url: "/"
-      # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-      # variant: "" # Optional: fill | outline | text | circle
-      # rel: "" # Optional
-      # target: "" # Optional
+      hoverEffect: "creative-fill" # More dynamic, drawing attention to the recommended plan
+      variant: "fill" # A solid, high-contrast button to make it stand out
+      target: "_blank"
   - enable: true
-    name: "Corporate"
-    description: "We care about their success. For us real relationships feel real"
+    name: "ELITE"
+    description: "Complete TikTok ecosystem with staff coaching & hiring"
     price:
       prependValue: "$"
-      value: "180"
+      value: "5555"
       appendValue: "/mo"
     features:
-      - WEB & MOBILE
-      - FREE CUSTOM DOMAIN
-      - BEST HOSTING EVER
-      - OUTSTANDING SUPPORT
-      - WEB DESIGN
+        - Everything in Glo-Up
+        - 10 Custom TikTok Reels Monthly
+        - Social Hiring + Live Stream Interviews
+        - TikTok Paid Ad Management
+        - Dedicated Content Coach
+        - Personal Branded ReelView for Each Staff Member
     button:
-      # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
       enable: true
-      label: "CHOOSE THIS PLAN"
+      label: "GO ELITE"
       url: "/"
-      # hoverEffect: "" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-      # variant: "" # Optional: fill | outline | text | circle
-      # rel: "" # Optional
-      # target: "" # Optional
+      hoverEffect: "magnetic" # A premium, interactive effect for the top-tier plan
+      variant: "fill" # Solid and prominent
+      target: "_blank"
 ---

@@ -355,3 +355,45 @@ footer {
 .video-player:empty {
   @apply h-96 bg-black;
 }
+
+/* Client Logos Section - Clean Version */
+.clients-section img {
+  width: 80px !important;
+  height: 80px !important;
+  transition: transform 0.3s ease;
+}
+
+.clients-section img:hover {
+  transform: scale(1.1);
+}
+
+/* Hide extra client items beyond first 4 */
+.clients-section .client-item:nth-child(n+5) {
+  display: none !important;
+}
+
+/* Alternative selectors if the above doesn't work */
+[class*="client"] img,
+[class*="logo"] img {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+[class*="client"]:nth-child(n+5) {
+  display: none !important;
+}
+/* DEBUG: Force show everything with red borders to see what's there */
+.clients-section * {
+  border: 2px solid red !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* DEBUG: Make all images in clients section visible */
+.clients-section img {
+  border: 3px solid blue !important;
+  width: 100px !important;
+  height: 100px !important;
+  background: yellow !important;
+}
