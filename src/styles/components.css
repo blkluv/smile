@@ -266,14 +266,14 @@
   }
 
   .logo-alternate {
-    @apply hidden;
+    @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
   }
 }
 
-/* Hide alternate logo */
+/* Logo visibility - FIXED */
 header {
   .logo {
-    @apply hidden;
+    @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
   }
 
   .logo-text {
@@ -291,7 +291,7 @@ header {
     }
 
     .logo-alternate {
-      @apply hidden;
+      @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
     }
   }
 }
@@ -303,7 +303,7 @@ footer {
   }
 
   .logo-alternate {
-    @apply hidden;
+    @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
   }
 }
 
