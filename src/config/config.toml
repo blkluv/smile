@@ -80,7 +80,7 @@
     text   = ""
 
   [settings.multilingual]
-    enable               = true
+    enable               = false
     defaultLanguage      = "en"
     disableLanguages     = []
     showDefaultLangInUrl = false
