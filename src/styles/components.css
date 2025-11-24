@@ -423,3 +423,31 @@ h2 {
     text-rendering: optimizeLegibility !important;
   }
 }
+/* FORCE FIX LOGO DUPLICATION */
+.logo-wrapper .logo,
+.logo-wrapper .logo-alternate {
+  display: none !important;
+}
+
+/* Show only main logo by default */
+.logo-wrapper .logo {
+  display: inline-block !important;
+}
+
+/* Hide main logo and show alternate in dark headers */
+header.header-dark .logo-wrapper .logo {
+  display: none !important;
+}
+
+header.header-dark .logo-wrapper .logo-alternate {
+  display: inline-block !important;
+}
+
+/* Force footer to use main logo only */
+footer .logo-wrapper .logo {
+  display: inline-block !important;
+}
+
+footer .logo-wrapper .logo-alternate {
+  display: none !important;
+}
