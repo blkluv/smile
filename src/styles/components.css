@@ -397,14 +397,21 @@ footer {
   height: 100px !important;
   background: yellow !important;
 }
-/* Mobile-specific fixes */
-@media (max-width: 768px) {
-  .logo-svg {
-    max-width: 150px; /* Smaller on mobile */
-  }
+/* Fix mobile letter-spacing for "ReeViews" */
+.hero-heading,
+h1,
+h2 {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
 
-  /* Ensure header has proper spacing for logo */
-  .header {
-    min-height: 60px; /* Prevents logo compression */
+/* Specific fix for "ReeViews" */
+@media (max-width: 768px) {
+  .hero-heading,
+  h1,
+  h2 {
+    letter-spacing: 0 !important;
+    font-kerning: normal !important;
+    text-rendering: optimizeLegibility !important;
   }
 }
