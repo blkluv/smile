@@ -1,77 +1,25 @@
 ---
 import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
-import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
-import { markdownify, toSentenceCase } from "@/lib/utils/textConverter";
-
-import { parseTomlToJson } from "@/lib/utils/tomlUtils";
-const config = parseTomlToJson();
-
-type Props = {
-  src?: string;
-  class?: string;
-  width?: string;
-  height?: string;
-  [key: string]: any;
-};
-
-let { src, class: className } = Astro.props;
-
-let {
-  logo,
-  logoWidth = "auto",
-  logoHeight = "auto",
-  logoText,
-  logoAlternate,
-  title,
-}: {
-  logo: string;
-  logoAlternate: string;
-  logoWidth: string;
-  logoHeight: string;
-  logoText: string;
-  title: string;
-} = config.site;
-
-if (Astro.props.width) {
-  logoWidth = Astro.props.width;
-}
-if (Astro.props.height) {
-  logoHeight = Astro.props.height;
-}
 ---
-
-<!-- DEBUG: logo path: {logo} -->
-<!-- DEBUG: logoAlternate path: {logoAlternate} -->
 
 <a
   href={getLocaleUrlCTM("/", Astro.currentLocale)}
-  class:list={["logo-wrapper", className]}>
-  {
-    src || logo ? (
-      <>
-        <OptimizedImage
-          src={src ? src : logo}
-          class="logo"
-          alt={toSentenceCase("Brand logo of " + title)}
-          style={{
-            height: logoHeight,
-            width: logoWidth,
-          }}
-        />
-        {logoText && (
-          <span class="logo-text" set:html={markdownify(logoText)} />
-        )}
-      </>
-    ) : logoText ? (
-      logoText
-    ) : (
-      title
-    )
-  }
+  style="display: flex; align-items: center; text-decoration: none;">
+
+  <img
+    src="/images/logo.svg"
+    alt="SmileSats Logo"
+    style="width: 120px; height: auto; display: block !important;"
+  />
 </a>
 
 <style>
-  .logo {
-    display: inline-block !important;
+  /* Force logo to be visible */
+  img[alt="SmileSats Logo"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 120px !important;
+    height: auto !important;
   }
 </style>
