@@ -3,52 +3,32 @@ import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
 import { parseTomlToJson } from "@/lib/utils/tomlUtils";
 
 const config = parseTomlToJson();
-
-type Props = {
-  src?: string;
-  class?: string;
-  width?: string;
-  height?: string;
-  [key: string]: any;
-};
-
-let { src, class: className, width, height } = Astro.props;
-
-// Get logo from the correct config location
-let logoPath = config.settings?.headerOffcanvas?.logo || "/images/logo-light.svg";
-let title = config.site?.title || "SmileSats";
 ---
 
-<a
-  href={getLocaleUrlCTM("/", Astro.currentLocale)}
-  class:list={["logo-wrapper", className]}
-  style="display: flex; align-items: center; text-decoration: none;">
-
-  <img
-    src={logoPath}
-    alt={`${title} Logo`}
-    class="logo-img"
-    style={`
-      --desktop-width: ${width || '120px'};
-      --desktop-height: ${height || 'auto'};
-    `}
-  />
+<a href={getLocaleUrlCTM("/", Astro.currentLocale)} class="logo-text">
+  😁<span class="smile-text">Smile</span><span class="sats-text">Sats</span>
 </a>
 
 <style>
-  .logo-wrapper .logo-img {
-    display: block !important;
-    max-width: 100% !important;
-    height: auto !important;
-    width: var(--desktop-width) !important;
-    height: var(--desktop-height) !important;
+  .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .smile-text {
+    color: white;
+  }
+
+  .sats-text {
+    color: #E9FD53; /* Your exact green color */
   }
 
   @media (max-width: 768px) {
-    .logo-wrapper .logo-img {
-      width: 150px !important; /* Force mobile size */
-      max-width: 150px !important;
-      height: auto !important;
+    .logo-text {
+      font-size: 20px;
     }
   }
 </style>
