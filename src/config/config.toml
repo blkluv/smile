@@ -8,8 +8,8 @@
   logo             = "/images/logo.svg"
   logoAlternate    = "/images/logo-light.svg"
   logoText         = ""
-  logoWidth        = "86px"
-  logoHeight       = "24px"
+  logoWidth        = "auto"
+  logoHeight       = "auto"
   trailingSlash    = true
 
   [site.favicon]
