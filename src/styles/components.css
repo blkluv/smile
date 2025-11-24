@@ -256,63 +256,32 @@
 /* Logo */
 .logo-wrapper {
   @apply flex items-center gap-2;
-
-  .logo {
-    @apply flex items-center gap-x-4;
-  }
-
-  .logo-text {
-    @apply sm:text-xl/inherit font-secondary text-2xl font-normal tracking-wider;
-  }
-
-  .logo-alternate {
-    @apply hidden; /* Only show one logo at a time */
-  }
 }
 
-/* Logo visibility - FIXED */
-header {
-  .logo {
-    @apply inline-block; /* Show main logo */
-  }
+.logo {
+  display: inline-block;
+}
 
-  .logo-alternate {
-    @apply hidden; /* Hide alternate logo by default */
-  }
+.logo-alternate {
+  display: none;
+}
 
-  .logo-text {
-    @apply text-dark;
-  }
+/* Logo visibility */
+header .logo {
+  display: inline-block;
+}
 
-  /* Show main logo in home page and alternate logo in other pages */
-  &.header-dark {
-    .logo {
-      @apply hidden; /* Hide main logo in dark header */
-    }
-
-    .logo-alternate {
-      @apply inline-block; /* Show alternate logo in dark header */
-    }
-
-    .logo-text {
-      @apply text-white;
-    }
-  }
+header .logo-alternate {
+  display: none;
 }
 
 /* Show main logo in footer */
-footer {
-  .logo {
-    @apply inline-block; /* Show main logo */
-  }
+footer .logo {
+  display: inline-block;
+}
 
-  .logo-alternate {
-    @apply hidden; /* Hide alternate logo */
-  }
-
-  .logo-text {
-    @apply text-h5 text-white;
-  }
+footer .logo-alternate {
+  display: none;
 }
 
 /* Custom List Style */
@@ -380,26 +349,21 @@ footer {
   display: none !important;
 }
 
-/* Alternative selectors if the above doesn't work */
-[class*="client"] img,
-[class*="logo"] img {
-  width: 80px !important;
-  height: 80px !important;
+/* Fix mobile letter-spacing for "ReeViews" */
+.hero-heading,
+h1,
+h2 {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
 }
 
-[class*="client"]:nth-child(n+5) {
-  display: none !important;
-}
-/* Logo Fix - Show main logo, hide alternate */
-.logo-wrapper .logo {
-  display: inline-block;
-}
-
-.logo-wrapper .logo-alternate {
-  display: none;
-}
-
-/* Ensure footer logo shows */
-footer .logo-wrapper .logo {
-  display: inline-block;
+/* Specific fix for "ReeViews" */
+@media (max-width: 768px) {
+  .hero-heading,
+  h1,
+  h2 {
+    letter-spacing: 0 !important;
+    font-kerning: normal !important;
+    text-rendering: optimizeLegibility !important;
+  }
 }
