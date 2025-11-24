@@ -434,13 +434,14 @@ h2 {
   display: inline-block !important;
 }
 
-/* Hide main logo and show alternate in dark headers */
-header.header-dark .logo-wrapper .logo {
-  display: none !important;
+/* ✅ KEEP ONLY THIS - Show logo everywhere */
+.logo-wrapper .logo {
+  display: inline-block !important;
 }
 
-header.header-dark .logo-wrapper .logo-alternate {
-  display: inline-block !important;
+/* Hide alternate logo since we're not using it */
+.logo-wrapper .logo-alternate {
+  display: none !important;
 }
 
 /* Force footer to use main logo only */
