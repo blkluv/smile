@@ -6,6 +6,7 @@
   taglineSeparator = ""
   baseUrl          = "https://smilesats.com"
   logo             = "/images/logo.svg"
+  logoAlternate    = ""
   logoText         = ""
   logoWidth        = "auto"
   logoHeight       = "auto"

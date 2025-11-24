@@ -451,3 +451,7 @@ footer .logo-wrapper .logo {
 footer .logo-wrapper .logo-alternate {
   display: none !important;
 }
+/* HIDE DUPLICATE LOGO */
+.logo-alternate {
+  display: none !important;
+}
