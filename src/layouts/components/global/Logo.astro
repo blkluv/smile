@@ -12,20 +12,11 @@ type Props = {
   [key: string]: any;
 };
 
-let { src, class: className } = Astro.props;
+let { src, class: className, width, height } = Astro.props;
 
 // Get logo from the correct config location
 let logoPath = config.settings?.headerOffcanvas?.logo || "/images/logo-light.svg";
-let logoWidth = "120px";
-let logoHeight = "auto";
 let title = config.site?.title || "SmileSats";
-
-if (Astro.props.width) {
-  logoWidth = Astro.props.width;
-}
-if (Astro.props.height) {
-  logoHeight = Astro.props.height;
-}
 ---
 
 <a
@@ -36,12 +27,11 @@ if (Astro.props.height) {
   <img
     src={logoPath}
     alt={`${title} Logo`}
-    style={`
-      width: ${logoWidth};
-      height: ${logoHeight};
-      display: block !important;
-    `}
     class="logo-img"
+    style={`
+      --desktop-width: ${width || '120px'};
+      --desktop-height: ${height || 'auto'};
+    `}
   />
 </a>
 
@@ -50,12 +40,14 @@ if (Astro.props.height) {
     display: block !important;
     max-width: 100% !important;
     height: auto !important;
+    width: var(--desktop-width) !important;
+    height: var(--desktop-height) !important;
   }
 
   @media (max-width: 768px) {
     .logo-wrapper .logo-img {
+      width: 150px !important; /* Force mobile size */
       max-width: 150px !important;
-      width: 150px !important;
       height: auto !important;
     }
   }
