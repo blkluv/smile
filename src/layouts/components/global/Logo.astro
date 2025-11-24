@@ -47,7 +47,14 @@ if (Astro.props.height) {
 <style>
   .logo-wrapper img {
     display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  @media (max-width: 768px) {
+    .logo-wrapper img {
+      max-width: 150px !important;
+    }
   }
 </style>
