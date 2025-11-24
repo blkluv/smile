@@ -41,20 +41,22 @@ if (Astro.props.height) {
       height: ${logoHeight};
       display: block !important;
     `}
+    class="logo-img"
   />
 </a>
 
 <style>
-  .logo-wrapper img {
+  .logo-wrapper .logo-img {
     display: block !important;
     max-width: 100% !important;
     height: auto !important;
-    width: auto !important;
   }
 
   @media (max-width: 768px) {
-    .logo-wrapper img {
+    .logo-wrapper .logo-img {
       max-width: 150px !important;
+      width: 150px !important;
+      height: auto !important;
     }
   }
 </style>
