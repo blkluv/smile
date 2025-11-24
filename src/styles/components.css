@@ -266,14 +266,18 @@
   }
 
   .logo-alternate {
-    @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
+    @apply hidden; /* Only show one logo at a time */
   }
 }
 
 /* Logo visibility - FIXED */
 header {
   .logo {
-    @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
+    @apply inline-block; /* Show main logo */
+  }
+
+  .logo-alternate {
+    @apply hidden; /* Hide alternate logo by default */
   }
 
   .logo-text {
@@ -283,27 +287,31 @@ header {
   /* Show main logo in home page and alternate logo in other pages */
   &.header-dark {
     .logo {
-      @apply inline-block;
+      @apply hidden; /* Hide main logo in dark header */
+    }
+
+    .logo-alternate {
+      @apply inline-block; /* Show alternate logo in dark header */
     }
 
     .logo-text {
       @apply text-white;
-    }
-
-    .logo-alternate {
-      @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
     }
   }
 }
 
 /* Show main logo in footer */
 footer {
-  .logo-text {
-    @apply text-h5 text-white;
+  .logo {
+    @apply inline-block; /* Show main logo */
   }
 
   .logo-alternate {
-    @apply inline-block; /* ✅ CHANGED: hidden → inline-block */
+    @apply hidden; /* Hide alternate logo */
+  }
+
+  .logo-text {
+    @apply text-h5 text-white;
   }
 }
 
