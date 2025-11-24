@@ -390,69 +390,16 @@ footer {
 [class*="client"]:nth-child(n+5) {
   display: none !important;
 }
-/* DEBUG: Force show everything with red borders to see what's there */
-.clients-section * {
-  border: 2px solid red !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* DEBUG: Make all images in clients section visible */
-.clients-section img {
-  border: 3px solid blue !important;
-  width: 100px !important;
-  height: 100px !important;
-  background: yellow !important;
-}
-/* Fix mobile letter-spacing for "ReeViews" */
-.hero-heading,
-h1,
-h2 {
-  letter-spacing: normal !important;
-  word-spacing: normal !important;
-}
-
-/* Specific fix for "ReeViews" */
-@media (max-width: 768px) {
-  .hero-heading,
-  h1,
-  h2 {
-    letter-spacing: 0 !important;
-    font-kerning: normal !important;
-    text-rendering: optimizeLegibility !important;
-  }
-}
-/* FORCE FIX LOGO DUPLICATION */
-.logo-wrapper .logo,
-.logo-wrapper .logo-alternate {
-  display: none !important;
-}
-
-/* Show only main logo by default */
+/* Logo Fix - Show main logo, hide alternate */
 .logo-wrapper .logo {
-  display: inline-block !important;
+  display: inline-block;
 }
 
-/* ✅ KEEP ONLY THIS - Show logo everywhere */
-.logo-wrapper .logo {
-  display: inline-block !important;
-}
-
-/* Hide alternate logo since we're not using it */
 .logo-wrapper .logo-alternate {
-  display: none !important;
+  display: none;
 }
 
-/* Force footer to use main logo only */
+/* Ensure footer logo shows */
 footer .logo-wrapper .logo {
-  display: inline-block !important;
-}
-
-footer .logo-wrapper .logo-alternate {
-  display: none !important;
-}
-/* HIDE DUPLICATE LOGO */
-.logo-alternate {
-  display: none !important;
+  display: inline-block;
 }
